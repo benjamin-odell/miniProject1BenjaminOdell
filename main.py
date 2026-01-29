@@ -16,9 +16,11 @@ closing = {}
 #loop through each stock in tickers gather closing data
 for ticker in stocks.tickers:
     data = yf.Ticker(ticker).history(period="10d")['Close']
-    closing[ticker] = []
-    for d in data:
-        closing[ticker].append(d)
+    closing[ticker] = np.array(data)
 
+#loop through each ticker and output image with matplot lib
+for stock in closing:
+    plt.plot(closing[stock])
+    plt.show()
 #prints out data
 pprint.pprint(closing)
