@@ -4,6 +4,8 @@
 import yfinance as yf
 import pprint
 import stock_tickers
+import numpy as np
+import matplotlib.pyplot as plt
 
 #Get the tickers for my chosen stocks
 stocks = yf.Tickers(stock_tickers.stocks())
@@ -20,4 +22,3 @@ for ticker in stocks.tickers:
 
 #prints out data
 pprint.pprint(closing)
-data = yf.Ticker('MSFT').history(period="10d")['Close']
