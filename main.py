@@ -27,5 +27,6 @@ if not path.isdir('plots'):
 for stock in closing:
     plt.plot(closing[stock])
     plt.savefig(path.join(path.dirname(__file__), 'plots', stock + '.png'))
+    plt.close()
 #prints out data
 pprint.pprint(closing)
