@@ -10,10 +10,10 @@ An in-depth paragraph about your project and overview of use.
 ## Getting Started
  
 ### Dependencies
- 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
-* List pip install instructions.
+```
+pip install -r requirements.txt
+```
+
  
 ### Installing
  
@@ -22,11 +22,7 @@ An in-depth paragraph about your project and overview of use.
  
 ### Executing program
  
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
+* Run the main.py file
  
 ## Help
  
