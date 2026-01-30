@@ -19,14 +19,16 @@ for ticker in stocks.tickers:
     data = yf.Ticker(ticker).history(period="10d")['Close']
     closing[ticker] = np.array(data)
 
+#holds names for folder to hold plots
+folder_name = 'charts'
 #checks if there is a plots dir if not create one
-if not path.isdir('plots'):
-    makedirs('plots')
+if not path.isdir(folder_name):
+    makedirs(folder_name)
 
 #loop through each ticker and output image with matplot lib
 for stock in closing:
     plt.plot(closing[stock])
-    plt.savefig(path.join(path.dirname(__file__), 'plots', stock + '.png'))
+    plt.savefig(path.join(path.dirname(__file__), folder_name, stock + '.png'))
     plt.close()
 #prints out data
-pprint.pprint(closing)
+#pprint.pprint(closing)
