@@ -5,7 +5,8 @@
 
 ## Description
  
-An in-depth paragraph about your project and overview of use.
+This program collect the past 10 days of closing prices for stocks (using yfinance) and 
+creates graphs using that data
  
 ## Getting Started
  
@@ -16,46 +17,24 @@ pip install -r requirements.txt
 
  
 ### Installing
- 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+
+* Download files and place in its own folder
+* You can change the stock tickers in stock_tickers.py if you want to look at different stocks
  
 ### Executing program
  
 * Run the main.py file
  
-## Help
- 
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
- 
 ## Authors
  
-Contributors names and contact info
- 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
- 
-## Version History
- 
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
- 
-## License
- 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
- 
+Benjamin Odell
+
 ## Acknowledgments
  
 Inspiration, code snippets, etc.
 * [Stack Overflow: Save matplotlib file to a directory](https://stackoverflow.com/questions/11373610/save-matplotlib-file-to-a-directory#:~:text=def,raise)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+* [yfinance Documentation](https://ranaroussi.github.io/yfinance/)
+* [NumPy Documentation](https://numpy.org/doc/stable/user/whatisnumpy.html)
+* [Matplotlib Documentation](https://matplotlib.org/stable/tutorials/pyplot.html)
+
 
