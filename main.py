@@ -17,7 +17,17 @@ closing = {}
 #loop through each stock in tickers gather closing data
 for ticker in stocks.tickers:
     data = yf.Ticker(ticker).history(period="10d")['Close']
-    closing[ticker] = np.array(data)
+    dates = np.array(data.axes[0].array)
+
+    #holds dates for the plot
+    axis = []
+
+    #loop through dates and format each date for mouth and day
+    for date in dates:
+        axis.append(date.strftime('%m/%d'))
+
+    #stores data and date into the closing dict
+    closing[ticker] = [axis, data]
 
 #holds names for folder to hold plots
 folder_name = 'charts'
@@ -27,8 +37,12 @@ if not path.isdir(folder_name):
 
 #loop through each ticker and output image with matplot lib
 for stock in closing:
-    plt.plot(closing[stock])
+    #plot figure
+    plt.plot(closing[stock][0], closing[stock][1], label=stock)
+    #add figures labels
+    plt.title(f"{stock}'s Closing Price($)")
+    plt.xlabel('Date')
+    plt.ylabel('Closing Price')
+    #save figure
     plt.savefig(path.join(path.dirname(__file__), folder_name, stock + '.png'))
     plt.close()
-#prints out data
-#pprint.pprint(closing)
