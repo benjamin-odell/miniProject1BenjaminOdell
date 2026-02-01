@@ -36,6 +36,8 @@ folder_name = 'charts'
 if not path.isdir(folder_name):
     makedirs(folder_name)
 
+print('saving charts...')
+
 #loop through each ticker and output image with matplot lib
 for stock in closing:
     #plot figure
@@ -47,3 +49,5 @@ for stock in closing:
     #save figure
     plt.savefig(path.join(path.dirname(__file__), folder_name, stock + '.png'))
     plt.close()
+
+print('charts saved!')

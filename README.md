@@ -24,6 +24,7 @@ pip install -r requirements.txt
 ### Executing program
  
 * Run the main.py file
+* Charts will be saved in a folder called charts
  
 ## Authors
  
